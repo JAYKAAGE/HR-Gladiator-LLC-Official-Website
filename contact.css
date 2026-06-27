@@ -120,10 +120,11 @@
 .contact-form-wrap {}
 
 .contact-form-card {
-  background: var(--gold);
+  background: var(--white);
   border-radius: 8px;
   padding: 3rem;
   box-shadow: var(--shadow-lg);
+  border-top: 4px solid var(--gold); 
 }
 
 .contact-form-card__header {
@@ -152,7 +153,11 @@
 }
 
 /* Highlight invalid fields */
-.form-group input.invalid,
+.form-group label {
+   color: var(--black-soft);
+}
+
+.form-group input.invalid
 .form-group select.invalid,
 .form-group textarea.invalid {
   border-color: #d32f2f;
