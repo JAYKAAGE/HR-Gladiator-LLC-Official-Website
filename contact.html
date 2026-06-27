@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Service — HR Gladiator LLC</title>
+  <meta name="description" content="Request HR Gladiator services. Submit your inquiry to Whitney Brewton and her team." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="icon" type="image/png" href="assets/logo-transparent.png" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="HR Gladiator home">
+        <img src="assets/logo-transparent.png" alt="HR Gladiator logo" />
+        <div class="nav__logo-text">
+          <span class="nav__logo-name">HR Gladiator</span>
+          <span class="nav__logo-sub">LLC</span>
+        </div>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"   class="nav__link">Home</a></li>
+        <li><a href="about.html"   class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link">Book a Service</a></li>
+      </ul>
+
+      <a href="contact.html" class="btn btn-primary nav__cta">Get Started</a>
+
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="page-header">
+    <div class="page-header__inner">
+      <p class="page-header__label">Ready to Get Started?</p>
+      <h1 class="page-header__title">Book a <span>Service</span></h1>
+      <p class="page-header__sub">Fill out the form below and Whitney Brewton will be in touch personally to discuss your HR needs.</p>
+    </div>
+  </header>
+
+  <!-- ===== CONTACT GRID ===== -->
+  <section class="contact-section" aria-labelledby="contact-form-heading">
+    <div class="container contact-grid">
+
+      <!-- Info Sidebar -->
+      <aside class="contact-info reveal">
+
+        <div class="contact-info__block">
+          <p class="contact-info__heading">Direct Contact</p>
+          <a href="tel:8106240880" class="contact-info__item">
+            <span class="contact-info__icon">☎</span>
+            <div>
+              <span class="contact-info__label">Phone</span>
+              <span class="contact-info__val">(810) 624-0880</span>
+            </div>
+          </a>
+          <a href="mailto:hrgladiatorllc@gmail.com" class="contact-info__item">
+            <span class="contact-info__icon">✉</span>
+            <div>
+              <span class="contact-info__label">Email</span>
+              <span class="contact-info__val">hrgladiatorllc@gmail.com</span>
+            </div>
+          </a>
+          <div class="contact-info__item">
+            <span class="contact-info__icon">📍</span>
+            <div>
+              <span class="contact-info__label">Headquarters</span>
+              <span class="contact-info__val">Grand Blanc, MI</span>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__icon">🌐</span>
+            <div>
+              <span class="contact-info__label">Service Area</span>
+              <span class="contact-info__val">Nationwide (Remote Available)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-info__services">
+          <p class="contact-info__heading">Available Services</p>
+          <ul class="contact-info__service-list">
+            <li>Leadership Development</li>
+            <li>Risk Management</li>
+            <li>HR Policy &amp; Procedures</li>
+            <li>HR Software Systems</li>
+            <li>Recruitment</li>
+            <li>Employee Grievance Management</li>
+            <li>HR Compliance</li>
+            <li>Employee Engagement</li>
+          </ul>
+        </div>
+
+        <div class="contact-info__logo-wrap" aria-hidden="true">
+          <img src="assets/logo-transparent.png" alt="" />
+        </div>
+
+      </aside>
+
+      <!-- Booking Form -->
+      <div class="contact-form-wrap reveal">
+        <h2 class="visually-hidden" id="contact-form-heading">Service Request Form</h2>
+
+        <div class="contact-form-card">
+          <div class="contact-form-card__header">
+            <span class="section-label">Service Request Form</span>
+            <h2 class="section-title">Let's <span>Talk</span></h2>
+            <div class="slash-divider"></div>
+          </div>
+
+          <!--
+            FORMSPREE SETUP:
+            1. Go to https://formspree.io and create a free account
+            2. Create a new form and get your endpoint URL
+            3. Replace "YOUR_FORMSPREE_ENDPOINT" in the action attribute below
+            4. The form will submit to your email automatically
+          -->
+          <form
+            id="booking-form"
+            action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT"
+            method="POST"
+            novalidate
+          >
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <!-- Redirect after submit (optional) -->
+            <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html" /> -->
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name <span class="req" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first_name"
+                  placeholder="Jane"
+                  required
+                  autocomplete="given-name"
+                />
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name <span class="req" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last_name"
+                  placeholder="Smith"
+                  required
+                  autocomplete="family-name"
+                />
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="jane@company.com"
+                  required
+                  autocomplete="email"
+                />
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(555) 000-0000"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="organization">Organization / Company Name</label>
+              <input
+                type="text"
+                id="organization"
+                name="organization"
+                placeholder="Your company or organization"
+                autocomplete="organization"
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="org-size">Organization Size</label>
+                <select id="org-size" name="org_size">
+                  <option value="" disabled selected>Select size...</option>
+                  <option value="solo">Solo / Freelance</option>
+                  <option value="2-10">2 – 10 employees</option>
+                  <option value="11-50">11 – 50 employees</option>
+                  <option value="51-200">51 – 200 employees</option>
+                  <option value="201+">201+ employees</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="location">Your Location</label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="City, State"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service of Interest <span class="req" aria-hidden="true">*</span></label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option value="leadership-development">Leadership Development</option>
+                <option value="risk-management">Risk Management</option>
+                <option value="hr-policy">HR Policy &amp; Procedures</option>
+                <option value="hr-software">HR Software Systems</option>
+                <option value="recruitment">Recruitment</option>
+                <option value="grievance-management">Employee Grievance Management</option>
+                <option value="hr-compliance">HR Compliance</option>
+                <option value="employee-engagement">Employee Engagement</option>
+                <option value="multiple">Multiple Services / Not Sure</option>
+              </select>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="timeline">Desired Timeline</label>
+              <select id="timeline" name="timeline">
+                <option value="" disabled selected>When do you need help?</option>
+                <option value="asap">As soon as possible</option>
+                <option value="1-month">Within 1 month</option>
+                <option value="1-3-months">1 – 3 months</option>
+                <option value="3-6-months">3 – 6 months</option>
+                <option value="exploring">Just exploring options</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Your Needs <span class="req" aria-hidden="true">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Describe your HR challenge, goals, or what you're hoping to accomplish. Any context you can share will help us prepare for our conversation."
+                required
+                rows="6"
+              ></textarea>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group form-group--checkbox">
+              <label class="checkbox-label">
+                <input type="checkbox" name="consent" id="consent" required />
+                <span class="checkbox-custom" aria-hidden="true"></span>
+                <span>I agree to be contacted by HR Gladiator LLC regarding my inquiry. <span class="req" aria-hidden="true">*</span></span>
+              </label>
+              <span class="form-error" aria-live="polite" id="consent-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit" id="submit-btn">
+              <span class="submit-text">Submit Request</span>
+              <span class="submit-loading" aria-hidden="true" style="display:none">Sending…</span>
+            </button>
+
+          </form>
+
+          <div class="form-success" id="form-success" aria-live="assertive" style="display:none">
+            <div class="form-success__icon" aria-hidden="true">✓</div>
+            <h3>Request Received!</h3>
+            <p>Thank you for reaching out. Whitney will review your submission and be in touch within 1–2 business days.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="assets/logo-transparent.png" alt="HR Gladiator logo" />
+        <p>Human Resources consulting done with precision and purpose. Based in Grand Blanc, MI — serving clients anywhere they need us.</p>
+        <a href="mailto:hrgladiatorllc@gmail.com" class="footer__contact-item">
+          <span class="icon">✉</span> hrgladiatorllc@gmail.com
+        </a>
+        <a href="tel:8106240880" class="footer__contact-item">
+          <span class="icon">☎</span> (810) 624-0880
+        </a>
+      </div>
+
+      <div>
+        <p class="footer__heading">Navigation</p>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Whitney</a></li>
+          <li><a href="contact.html">Book a Service</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer__heading">Services</p>
+        <ul class="footer__links">
+          <li><a href="contact.html">Leadership Development</a></li>
+          <li><a href="contact.html">Risk Management</a></li>
+          <li><a href="contact.html">HR Policy &amp; Procedures</a></li>
+          <li><a href="contact.html">HR Compliance</a></li>
+          <li><a href="contact.html">Recruitment</a></li>
+          <li><a href="contact.html">Employee Engagement</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; <span id="footer-year"></span> <strong>HR Gladiator LLC</strong>. All rights reserved. Grand Blanc, MI.</p>
+      <p class="footer__copy">Whitney Brewton, Executive Director</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+/* ============================================
+   HR GLADIATOR — Contact / Booking Page Styles
+   ============================================ */
+
+/* ---------- Layout ---------- */
+.contact-section {
+  padding: 5rem 0 7rem;
+  background: var(--gray-light);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ---------- Info Sidebar ---------- */
+.contact-info {
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+
+.contact-info__block {
+  background: var(--black);
+  border-radius: 6px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border-top: 3px solid var(--pink);
+}
+
+.contact-info__heading {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+}
+
+.contact-info__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+  color: var(--white);
+  transition: color var(--transition);
+}
+
+.contact-info__item:hover { color: var(--pink); }
+
+.contact-info__icon {
+  font-size: 1.1rem;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+.contact-info__label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 0.2rem;
+}
+
+.contact-info__val {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.contact-info__item:hover .contact-info__val { color: var(--pink-light); }
+
+/* Services list in sidebar */
+.contact-info__services {
+  background: var(--white);
+  border-radius: 6px;
+  padding: 1.75rem;
+  border-left: 3px solid var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.contact-info__service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-info__service-list li {
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.contact-info__service-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--pink);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Logo watermark in sidebar */
+.contact-info__logo-wrap {
+  opacity: 0.08;
+  pointer-events: none;
+  padding: 0 1rem;
+}
+
+.contact-info__logo-wrap img { width: 100%; }
+
+/* ---------- Form Card ---------- */
+.contact-form-wrap {}
+
+.contact-form-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-form-card__header {
+  margin-bottom: 2.5rem;
+}
+
+/* ---------- Form Rows ---------- */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.req {
+  color: var(--pink);
+  font-size: 0.9em;
+}
+
+.form-error {
+  display: block;
+  font-size: 0.78rem;
+  color: #d32f2f;
+  font-weight: 600;
+  margin-top: 0.35rem;
+  min-height: 1.1em;
+}
+
+/* Highlight invalid fields */
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 3px rgba(211,47,47,0.1);
+}
+
+/* ---------- Checkbox ---------- */
+.form-group--checkbox {
+  margin-top: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: var(--gray-text);
+  line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--gray-mid);
+  border-radius: 3px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  position: relative;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+  background: var(--pink);
+  border-color: var(--pink);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: 2px solid var(--white);
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.checkbox-label input[type="checkbox"]:focus + .checkbox-custom {
+  box-shadow: 0 0 0 3px rgba(255,62,165,0.2);
+}
+
+/* ---------- Submit Button ---------- */
+.form-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.form-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ---------- Success State ---------- */
+.form-success {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.form-success__icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--pink), var(--pink-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  color: var(--white);
+  margin: 0 auto 1.5rem;
+}
+
+.form-success h3 {
+  font-size: 1.5rem;
+  color: var(--black);
+  margin-bottom: 0.75rem;
+}
+
+.form-success p {
+  color: var(--gray-text);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ---------- Visually hidden (a11y) ---------- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .contact-info__logo-wrap { display: none; }
+}
+
+@media (max-width: 640px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
