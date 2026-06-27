@@ -152,6 +152,19 @@
   min-height: 1.1em;
 }
 
+/* ---------- Form Inputs Text Color ---------- */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  color: var(--black);
+  background: var(--white);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
 /* Highlight invalid fields */
 .form-group label {
    color: var(--black-soft);
