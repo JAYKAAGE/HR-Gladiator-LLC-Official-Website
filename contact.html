@@ -330,6 +330,22 @@
     </div>
   </footer>
 
+  <script>
+  // Intersection Observer for scroll-triggered reveals
+  const revealElements = document.querySelectorAll('.reveal');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  revealElements.forEach(el => observer.observe(el));
+</script>
+
   <script src="nav.js"></script>
   <script src="contact.js"></script>
 </body>
