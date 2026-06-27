@@ -200,8 +200,8 @@
 }
 
 .checkbox-custom {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   border: 2px solid var(--gray-mid);
   border-radius: 3px;
   flex-shrink: 0;
@@ -218,10 +218,10 @@
 .checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
   content: '';
   position: absolute;
-  left: 5px;
-  top: 2px;
-  width: 6px;
-  height: 10px;
+  left: 7px;
+  top: 3px;
+  width: 8px;
+  height: 13px;
   border: 2px solid var(--black);
   border-top: none;
   border-left: none;
