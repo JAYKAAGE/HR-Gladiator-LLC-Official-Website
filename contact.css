@@ -43,7 +43,7 @@
   align-items: flex-start;
   gap: 0.85rem;
   margin-bottom: 1.25rem;
-  color: var(--white);
+  color: var(--black);
   transition: color var(--transition);
 }
 
@@ -69,14 +69,14 @@
   display: block;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--white);
+  color: var(--gold);
 }
 
 .contact-info__item:hover .contact-info__val { color: var(--pink-light); }
 
 /* Services list in sidebar */
 .contact-info__services {
-  background: var(--white);
+  background: var(--gold);
   border-radius: 6px;
   padding: 1.75rem;
   border-left: 3px solid var(--gold);
@@ -120,7 +120,7 @@
 .contact-form-wrap {}
 
 .contact-form-card {
-  background: var(--white);
+  background: var(--gold);
   border-radius: 8px;
   padding: 3rem;
   box-shadow: var(--shadow-lg);
@@ -204,7 +204,7 @@
   top: 2px;
   width: 6px;
   height: 10px;
-  border: 2px solid var(--white);
+  border: 2px solid var(--black);
   border-top: none;
   border-left: none;
   transform: rotate(45deg);
@@ -245,7 +245,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
-  color: var(--white);
+  color: var(--pink);
   margin: 0 auto 1.5rem;
 }
 
